@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tp-NM-VIC">
+                                <rect key="frame" x="86" y="89.999999999999986" width="203" height="167.66666666666663"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="140"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwm-pY-mYG">
+                                <rect key="frame" x="168" y="486.66666666666669" width="39" height="30.000000000000057"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NRo-tZ-hcC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYy-zu-qyC">
+                                <rect key="frame" x="155" y="387.66666666666669" width="65" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startStopDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i3M-Cc-EWx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CardonApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4V7-Yc-ycy">
+                                <rect key="frame" x="155.66666666666666" y="757" width="64" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5li-Da-6hg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3835408053870335" green="0.46252935798270667" blue="1" alpha="0.49141725352112675" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vwm-pY-mYG" firstAttribute="top" secondItem="pYy-zu-qyC" secondAttribute="bottom" constant="50" id="93X-Ce-cn4"/>
+                            <constraint firstItem="4V7-Yc-ycy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RpT-2A-tCO"/>
+                            <constraint firstItem="pYy-zu-qyC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XBV-ZZ-jGA"/>
+                            <constraint firstItem="Vwm-pY-mYG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ciL-Xa-Vel"/>
+                            <constraint firstItem="2tp-NM-VIC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fee-48-PnB"/>
+                            <constraint firstItem="pYy-zu-qyC" firstAttribute="top" secondItem="2tp-NM-VIC" secondAttribute="bottom" constant="130" id="lso-nX-PMw">
+                                <variation key="heightClass=compact-widthClass=regular" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="2tp-NM-VIC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="yS0-XD-521"/>
+                            <constraint firstItem="4V7-Yc-ycy" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="z3I-X5-hbG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="startStopButton" destination="pYy-zu-qyC" id="cvO-ms-phR"/>
+                        <outlet property="timerLabel" destination="2tp-NM-VIC" id="zR7-kS-7Ox"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.23913043478262"/>
+        </scene>
+    </scenes>
+</document>
